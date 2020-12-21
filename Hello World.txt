@@ -1,1 +1,4 @@
 Hello World
+Clase del dia
+git int, git remote ---> son los mas usados
+git clone, git fetch ---> clonar y pedir el repositorio
