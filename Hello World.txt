@@ -2,3 +2,6 @@ Hello World
 Clase del dia
 git int, git remote ---> son los mas usados
 git clone, git fetch ---> clonar y pedir el repositorio
+
+Re guay todo con puch.
+se supone que esta linea tiene que agregarse en mi repositorio
