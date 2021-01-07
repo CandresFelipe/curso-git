@@ -8,20 +8,40 @@
            ol{
                list-style: none;
                display: grid;
-               grid-template-columns: repeat(7,100px);
-
+               grid-template-columns: repeat(7,1fr);
+                padding: 0px;
+                margin: 0px;
+                width: 50px;
+                text-align: center;
            }
+          div{
+                text-align:left;
+          }
            .first-date{
                 grid-column-start: 5;
            }
-           .month{
-               display:flow-root;
+           
+           .box{
+               padding: 0px;
+               margin: 5px;
+               background-color: rgb(199, 199, 199);
+               align-items: center;
+               
            }
        </style>
 <body>
     <div>
         <h1 = class ="month"> ENERO 2021</h1>
+    </div>
         <ol>
+            <li = class ="box">lunes</li>
+            <li = class ="box">martes</li>
+            <li = class ="box">miercoles</li>
+            <li = class ="box">jueves</li>
+            <li = class ="box">viernes</li>
+            <li = class ="box">sabado</li>
+            <li = class ="box">domingo</li>
+
             <li = class ="first-date">1</li>
             <li>2</li>
             <li>3</li>
@@ -54,6 +74,5 @@
             <li>30</li>
             <li>31</li>
         </ol>
-    </div>
 </body>
 </html>
