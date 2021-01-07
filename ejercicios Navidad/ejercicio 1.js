@@ -57,17 +57,21 @@ var values3 = ['Mars', 9, 'Apple'];
 ) */
 
 // Algortihm excercise 3
+var marco= [0, 1, 2, 3];
+var totalPeople = 15;
+var marie = 2*tomas;
+var tomas;
+var init = 0;
 
-var userData = [];
-userData = prompt("ingrese los valores de los items: ").split(",");
-if(userData !== Number){
-    console.error("no es un valor valido");
-    userData = prompt("ingrese los valores de los items: ")
-}
-userData.reduce((valor,menor)=>{
-    var expensive = [];
-    if(expensive.indexOf(valor) > menor){
-        expensive = valor
+for(let i = 0; marco.length>i; i++){
+
+    init = marco[i]
+    tomas = (totalPeople-init)/3
+
+    if((totalPeople-init)%3===0){
+
+        var marie = 2*tomas;
+
+        console.log('Tomas atiende a ' + tomas + ', Maria atiende a ' + marie + ' y marco atiende a ' + marco[i])
     }
-    return expensive;
-})
+}
