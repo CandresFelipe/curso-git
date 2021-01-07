@@ -3,74 +3,57 @@
    <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
+       <title>My calendar</title>
        <style>
-           .semana{
-                display: flex;
-               flex-wrap: nowrap;
-               
-           }
-           .dias{
-               display: flex;
-               flex-wrap:wrap;
+           ol{
+               list-style: none;
+               display: grid;
+               grid-template-columns: repeat(7,100px);
 
-               ;
            }
-           .box{ 
-               margin: 0.0625rem;
-               width: 14%;
-               height: flex;
-               background-color: whitesmoke;
-                color :darkgreen;
+           .first-date{
+                grid-column-start: 5;
+           }
+           .month{
+               display:flow-root;
            }
        </style>
-   </head>
-   <body>
-       <div class="semana">
-           <div class="box">M</div>
-           <div class="box">T</div>
-           <div class="box">W</div>
-           <div class="box">T</div>
-           <div class="box">F</div>
-           <div class="box">S</div>
-           <div class="box">S</div>
-           
-       </div>
-   <div class="dias">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
-        <div class="box">6</div>
-        <div class="box">7</div>
-        <div class="box">8</div>
-        <div class="box">9</div>
-        <div class="box">10</div>
-        <div class="box">11</div>
-        <div class="box">12</div>
-        <div class="box">13</div>
-        <div class="box">14</div>
-        <div class="box">15</div>
-        <div class="box">16</div>
-        <div class="box">17</div>
-        <div class="box">18</div>
-        <div class="box">19</div>
-        <div class="box">20</div>
-        <div class="box">21</div>
-        <div class="box">22</div>
-        <div class="box">23</div>
-        <div class="box">13</div>
-        <div class="box">24</div>
-        <div class="box">15</div>
-        <div class="box">25</div>
-        <div class="box">26</div>
-        <div class="box">27</div>
-        <div class="box">28</div>
-        <div class="box">29</div>
-        <div class="box">30</div>
-        <div class="box">31</div>
-
+<body>
+    <div>
+        <h1 = class ="month"> ENERO 2021</h1>
+        <ol>
+            <li = class ="first-date">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+        </ol>
     </div>
 </body>
 </html>
