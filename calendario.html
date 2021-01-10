@@ -34,12 +34,19 @@
         font-size: 1.5rem;
         color:rgb(87, 87, 87);
     }
+    .calendar .pm:hover{
+        color: rgba(255, 255, 255, 0.548);
+    }
     .summary{
         height: 0.5rem;
         margin: 1.2rem;
         font-size: 0.8rem;
         color:rgb(87, 87, 87);
     }
+    .summary:hover{
+        color: rgba(255, 255, 255, 0.548);
+    }
+
     .calendar .date{
         padding: 15px;
         display: grid;
@@ -65,7 +72,8 @@
         background-attachment: fixed;
     }
     .numday:hover{
-        background: rgb(158, 158, 158);
+        background: rgba(158, 158, 158, 0.548);
+        border: 0.1rem solid rgba(255, 255, 255, 0.548);
     }
     
     .calendar .date .firstday{
@@ -94,6 +102,9 @@
         background: none;
         cursor: pointer;   
     }
+    .buttons:hover{
+        color: hsl(360,100%,100%);
+    }
     .rotate{
         transform: rotate(0.5turn);
     }
@@ -118,7 +129,6 @@
 
     .calendar .date .currentday{
         background: rgb(158, 158, 158);
-        border: 0.08rem solid;
         border-style: groove;
         box-shadow: blanchedalmond;
     }
@@ -127,7 +137,7 @@
 
     <div class="calendar">
         <div class="clock">20:21:00<span> </span><span class="pm">PM</span></div>
-        <div class="summary">Sunday, January 10th, 2021</div>
+        <p class="summary">Sunday, January 10th, 2021</p>
         <hr>
         <div class = "titles">
         <h4 class = "month">January 2021</h4>
