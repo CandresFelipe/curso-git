@@ -1,78 +1,196 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>My calendar</title>
-       <style>
-           ol{
-               list-style: none;
-               display: grid;
-               grid-template-columns: repeat(7,1fr);
-                padding: 0px;
-                margin: 0px;
-                width: 50px;
-                text-align: center;
-           }
-          div{
-                text-align:left;
-          }
-           .first-date{
-                grid-column-start: 5;
-           }
-           
-           .box{
-               padding: 0px;
-               margin: 5px;
-               background-color: rgb(199, 199, 199);
-               align-items: center;
-               
-           }
-       </style>
-<body>
-    <div>
-        <h1 = class ="month"> ENERO 2021</h1>
-    </div>
-        <ol>
-            <li = class ="box">lunes</li>
-            <li = class ="box">martes</li>
-            <li = class ="box">miercoles</li>
-            <li = class ="box">jueves</li>
-            <li = class ="box">viernes</li>
-            <li = class ="box">sabado</li>
-            <li = class ="box">domingo</li>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Calendar</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50rem;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    hr{
+        height: 0em;
+    }
+    .calendar{
+        width:20.75rem;
+        height: auto;
+        background: rgba(39, 39, 39, 0.918);
+        box-sizing: border-box;
+    }
+    .clock{
+        height: 2.2rem;
+        margin: 1.2rem;
+        font-size: 3rem;
+        color: white;
+    }
+    .calendar .pm{
+        font-size: 1.5rem;
+        color:rgb(87, 87, 87);
+    }
+    .summary{
+        height: 0.5rem;
+        margin: 1.2rem;
+        font-size: 0.8rem;
+        color:rgb(87, 87, 87);
+    }
+    .calendar .date{
+        padding: 15px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(7,1fr);
+        box-sizing: border-box;
+        grid-gap: 7px;
+        color: white;
+    }
+    .calendar .date div .dayweek {
+        align-content: center;
+        text-align: center;
+        font-weight: 700;
+    }
+    .numday{
+        align-content: center;
+        text-align: center;
+        height: 2rem;
+        width: 2rem;
+        color:white;
+        background-color: #3d3d3d31;
+        border: 0.0625rem solid   #3d3d3d31;
+        background-attachment: fixed;
+    }
+    .numday:hover{
+        background: rgb(158, 158, 158);
+    }
+    
+    .calendar .date .firstday{
+        grid-column-start: 5;
+    }
+    .calendar .titles{
+        display: grid;
+        height: 2.5rem;
+        grid-template-columns: 14.52rem 3.1125rem 3.1125rem;
+        border: 3rem;
+    }
+    
+    .calendar .titles .month{
+        color:white;
+        margin: 1.2rem;
+        box-sizing: border-box;
+    }
+    .titles .buttons {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-content: center;
+        padding: 1rem;
+        width: 1.2rem;
+        color:white;
+        border-style: hidden;
+        background: none;
+        cursor: pointer;   
+    }
+    .rotate{
+        transform: rotate(0.5turn);
+    }
+    .date div.daysoff{
+        display: grid;
+        align-content: space-around;
+        font-size: 0.8rem;
+        color:rgba(117, 117, 117, 0.479);
+        text-align: center;
+    }
+    .calendar .today{
+        display: grid;
+        grid-template-columns: 16.75rem 2rem;
+        color:white;
+        font-size: 0.9rem;
+        margin: 0.4rem;
+        padding: 0.6rem;
+    }
+    .plus{
+        text-align: center;
+    }
 
-            <li = class ="first-date">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-        </ol>
+    .calendar .date .currentday{
+        background: rgb(158, 158, 158);
+        border: 0.08rem solid;
+        border-style: groove;
+        box-shadow: blanchedalmond;
+    }
+</style>
+<body>
+
+    <div class="calendar">
+        <div class="clock">20:21:00<span> </span><span class="pm">PM</span></div>
+        <div class="summary">Sunday, January 10th, 2021</div>
+        <hr>
+        <div class = "titles">
+        <h4 class = "month">January 2021</h4>
+        <button class ="buttons rotate"> v </button>
+        <button class ="buttons"> v </button>
+        </div>
+        <div class="date">
+            <div class="dayweek">Sun</div>
+            <div class="dayweek">Mon</div>
+            <div class="dayweek">Tue</div>
+            <div class="dayweek">Wen</div>
+            <div class="dayweek">Thu</div>
+            <div class="dayweek">Fri</div>
+            <div class="dayweek">Sat</div>
+            <div class="daysoff">28</div>
+            <div class="daysoff">29</div>
+            <div class="daysoff">30</div>
+            <div class="daysoff">31</div>
+            <button class="numday firstday">1</button>
+            <button class="numday">2</button>
+            <button class="numday">3</button>
+            <button class="numday">4</button>
+            <button class="numday">5</button>
+            <button class="numday">6</button>
+            <button class="numday">7</button>
+            <button class="numday">8</button>
+            <button class="numday">9</button>
+            <button class="numday">10</button>
+            <button class="numday currentday">11</button>
+            <button class="numday">12</button>
+            <button class="numday">13</button>
+            <button class="numday">14</button>
+            <button class="numday">15</button>
+            <button class="numday">16</button>
+            <button class="numday">17</button>
+            <button class="numday">18</button>
+            <button class="numday">19</button>
+            <button class="numday">20</button>
+            <button class="numday">21</button>
+            <button class="numday">22</button>
+            <button class="numday">23</button>
+            <button class="numday">24</button>
+            <button class="numday">25</button>
+            <button class="numday">26</button>
+            <button class="numday">27</button>
+            <button class="numday">28</button>
+            <button class="numday">29</button>
+            <button class="numday">30</button>
+            <button class="numday">31</button>
+            <div class="daysoff">1</div>
+            <div class="daysoff">2</div>
+            <div class="daysoff">3</div>
+            <div class="daysoff">4</div>
+            <div class="daysoff">5</div>
+            <div class="daysoff">6</div>
+            <div class="daysoff">7</div>     
+        </div>
+        <hr>
+        <div class ="today">
+            <div>Today</div>
+            <div class ="plus">+</div>
+        </div>
+    </div>
+</body>
 </body>
 </html>
