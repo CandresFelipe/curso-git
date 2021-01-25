@@ -9,7 +9,7 @@ function isPalindrom(){
     reversedString.forEach((element1,i)=>{
         if(Number(element1)==element1)
         {throw "hay valores numericos en la cadena de caractéres"}
-        check = (element1 ===str[i])? true : false;
+        check = (element1 === str[i])? true : false;
     }); output = check? alert(`la palabra *${word}* es un Palídromo`):alert(`la palabra *${word}* no es un Palídromo`)
     return output;
 }
@@ -34,18 +34,19 @@ function isPalindrom(){
 // agregar texto al div
     let text = document.createTextNode("Hello World")
     div.appendChild(text)
+    document.body.appendChild(div)
 // crear hijo antes del div con texto.
     var div2 = document.createElement('div')
-    document.body.insertBefore(div2,div)
+    div.insertBefore(div2,text)
 // buscar los nodos del primer Div
-    let childs = div.children;
+    let childs = div.childNodes;
 // dime los elementos que tiene el primer div
-    let elements = div.ELEMENT_NODE;
+    let elements = div.children;
 // buscar todos los div de la pagina
-    let allDivs = document.body.querySelectorAll("div")
+    let allDivs = document.body.querySelectorAll('div')
 // buscar los div que contiene la clase agregada "clasediv"
     let classDiv = document.body.querySelectorAll("clasediv")
 // buscar los divs con el id agregado en el punto 5
-    let seekdivsId = document.body.querySelectorAll("divId")
+    let seekdivsId = document.getElementById("divId")
 
 
